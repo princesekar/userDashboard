@@ -8,12 +8,11 @@ import { map, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  static isLoggedIn() {
-    throw new Error('Method not implemented.');
-  }
   private loggedIn = false;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.loggedIn = !!localStorage.getItem('loggedIn'); // Check local storage for logged-in status
+  }
 
   login(email: string, password: string): Observable<boolean> {
     return this.http.get<any[]>('/assets/users.json').pipe(
@@ -21,6 +20,7 @@ export class AuthService {
         const user = users.find(u => u.email === email && u.password === password);
         if (user) {
           this.loggedIn = true;
+          localStorage.setItem('loggedIn', 'true'); // Store login status in local storage
           return true;
         }
         return false;
@@ -31,6 +31,7 @@ export class AuthService {
 
   logout(): void {
     this.loggedIn = false;
+    localStorage.removeItem('loggedIn'); // Remove login status from local storage
   }
 
   isLoggedIn(): boolean {

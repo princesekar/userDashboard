@@ -4,7 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { authGuard } from './auth.guard';
 import { LayoutComponent } from './layout/layout.component';
-import { ProfileEditComponent } from './layout/profile-edit/profile-edit.component';
+import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 // import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 
 const routes: Routes = [
