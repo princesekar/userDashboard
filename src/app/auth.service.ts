@@ -15,12 +15,13 @@ export class AuthService {
   }
 
   login(email: string, password: string): Observable<boolean> {
-    return this.http.get<any[]>('/assets/users.json').pipe(
+    return this.http.get<any[]>('http://localhost:3000/users').pipe(
       map((users: any[]) => {
-        const user = users.find(u => u.email === email && u.password === password);
+        const user = users.find(u => u.profile.email === email && u.profile.password === password);
         if (user) {
           this.loggedIn = true;
           localStorage.setItem('loggedIn', 'true'); // Store login status in local storage
+          localStorage.setItem('currentUserEmail', email);
           return true;
         }
         return false;
@@ -32,9 +33,14 @@ export class AuthService {
   logout(): void {
     this.loggedIn = false;
     localStorage.removeItem('loggedIn'); // Remove login status from local storage
+    localStorage.removeItem('currentUserEmail');
   }
 
   isLoggedIn(): boolean {
     return this.loggedIn;
+  }
+
+  getCurrentUserEmail(): any {
+    return localStorage.getItem('currentUserEmail');
   }
 }

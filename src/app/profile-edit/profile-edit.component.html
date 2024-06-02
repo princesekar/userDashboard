@@ -1,22 +1,51 @@
-<!-- profile-edit.component.html -->
-<div>
-    <h2>Edit Profile</h2>
-    <div>
-      <label>Name:</label>
-      <input type="text" [(ngModel)]="profile.name" name="name">
+<div class="container rounded bg-white mt-5">
+    <div class="row">
+        <div class="col-md-4 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
+                    [src]="profile.profile.imgUrl" width="90">
+                <span class="font-weight-bold">{{profile.profile.firstname}}{{profile.profile.secondname}}</span>
+                <span class="text-black-50">{{profile.profile.email}}</span>
+                <span>{{profile.profile.country}}</span>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="d-flex flex-row align-items-center back">
+                        <a routerLink="/dashboard"><b><i class="bi bi-arrow-left"></i> Back to Dashboard</b></a>
+                    </div>
+                    <div class="back">
+                        <a (click)="editProfile()" class="" type="button"><b><i class="bi bi-pencil-square"></i> Edit
+                                Profile</b></a>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="First name"
+                            [(ngModel)]="profile.profile.firstname" name="name" [disabled]="!isEditing"></div>
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Second name"
+                            [(ngModel)]="profile.profile.secondname" name="name" [disabled]="!isEditing"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Email"
+                            [(ngModel)]="profile.profile.email" name="email" [disabled]="!isEditing"></div>
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Age"
+                            [(ngModel)]="profile.profile.age" name="age" [disabled]="!isEditing"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="address"
+                            [(ngModel)]="profile.profile.address" name="address" [disabled]="!isEditing"></div>
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Country"
+                            [(ngModel)]="profile.profile.country" name="country" [disabled]="!isEditing"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><input type="password" class="form-control" placeholder="Password"
+                            [(ngModel)]="profile.profile.password" name="password" [disabled]="!isEditing"></div>
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Mobile Number"
+                            [(ngModel)]="profile.profile.number" name="number" [disabled]="!isEditing"></div>
+                </div>
+                <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button"
+                        (click)="saveProfile()">Save Profile</button></div>
+            </div>
+        </div>
     </div>
-    <div>
-      <label>Email:</label>
-      <input type="email" [(ngModel)]="profile.email" name="email" disabled>
-      <!-- Disabled to prevent users from editing their email -->
-    </div>
-    <div>
-      <label>Age:</label>
-      <input type="number" [(ngModel)]="profile.age" name="age">
-    </div>
-    <div>
-      <label>Address:</label>
-      <input type="text" [(ngModel)]="profile.address" name="address">
-    </div>
-    <button (click)="saveProfile()">Save</button>
-  </div>
+</div>

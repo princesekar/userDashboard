@@ -22,7 +22,7 @@ import { ProfileEditComponent } from './profile-edit/profile-edit.component';
     LayoutComponent,
     ProfileEditComponent,
     SideNavComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
