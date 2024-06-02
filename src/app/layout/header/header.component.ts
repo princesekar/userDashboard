@@ -10,21 +10,23 @@ import { AuthService } from '../../auth.service';
 })
 export class HeaderComponent {
   profile: any;
-  userEmail: string | undefined;
-  private apiUrl = 'http://localhost:3000/users';
 
-  constructor(private http: HttpClient, private authService: AuthService) { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit(): void {
-    this.userEmail = this.authService.getCurrentUserEmail();
-    this.fetchUserProfile();
+    this.getUserProfile();
   }
 
-
-  fetchUserProfile(): void {
-    this.http.get<any[]>(this.apiUrl).subscribe(users => {
-      this.profile = users.find(user => user.profile.email === this.userEmail); 
-      console.log(this.profile)
-    });
+  getUserProfile(): void {
+    this.sharedService.fetchUserProfile().subscribe(
+      profile => {
+        this.profile = profile;
+        console.log(profile, 'fetched profile');
+      },
+      error => {
+        console.error('Error fetching profile:', error);
+      }
+    );
   }
+
 }

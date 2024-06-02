@@ -1,0 +1,19 @@
+.app-card.card {
+  background: #ffffff;
+  color: #171717;
+  border-radius: 0;
+  box-shadow: none;
+  .card-body {
+    padding: 1.25rem;
+    h5 {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  div.app-card.card {
+    width: 100%;
+  }
+}

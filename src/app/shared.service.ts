@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthService } from './auth.service';
-import { Observable, map } from 'rxjs';
+import { Observable, catchError, map, of } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -13,14 +14,18 @@ export class SharedService {
 
   constructor(private http: HttpClient, private authService: AuthService) { }
 
-  ngOnInit(): void {
-    this.userEmail = this.authService.getCurrentUserEmail();
+  ngOnInit() {
+
   }
 
+  updateUserProfile(profile: any, profileId: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${profileId}`, profile);
+  }
 
-  // fetchUserProfile(): Observable<any> {
-  //   this.http.get<any[]>(this.apiUrl).subscribe(users => {
-  //     this.profile = users.find(user => user.profile.email === this.userEmail); // Ensure profile ID is correctly fetched
-  //   });
-  // }
+  fetchUserProfile(): Observable<any> {
+    this.userEmail = this.authService.getCurrentUserEmail();
+    return this.http.get<any[]>(this.apiUrl).pipe(
+      map(users => users.find(user => user.profile.email === this.userEmail))
+    );
+  }
 }

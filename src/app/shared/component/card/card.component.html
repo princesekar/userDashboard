@@ -1,0 +1,15 @@
+<div class="card app-card shadow">
+  <div class="card-body">
+    <h5 *ngIf="title" class="card-title">{{ title }}</h5>
+    <ng-template *ngIf="cardHeader" [ngTemplateOutlet]="cardHeader"></ng-template>
+    <ng-template [ngTemplateOutlet]="cardTemplate"></ng-template>
+    <ng-container *ngIf="content">
+      <p class="card-text">
+        {{ content }}
+      </p>
+    </ng-container>
+    <div class="'card-footer" *ngIf="cardFooter">
+      <ng-template [ngTemplateOutlet]="cardFooter"></ng-template>
+    </div>
+  </div>
+</div>
