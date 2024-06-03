@@ -2,18 +2,32 @@
     <div class="nav-section mb-2">
     </div>
     <div class="card-section container-fluid g-0">
-      <div class="row gy-2 gx-2">
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
-          <app-card [title]="'Energy Sources'">
-            <ng-template #cardTemplate>
-              <div class="energy"></div>
-              <canvas style="min-height: 150px; max-height: 250px;" baseChart class="chart mt-3" type="bar"
-              [data]="energyChart" [options]="energyOptions">
-            </canvas>
-            </ng-template>
-          </app-card>
-        </div>
+        <div class="row gy-2 gx-2">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                <app-card [title]="'Energy Sources'">
+                    <ng-template #cardTemplate>
+                        <div class="energy"></div>
 
-      </div>
+                    </ng-template>
+                </app-card>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                <app-card [title]="'Energy Sources'">
+                    <ng-template #cardTemplate>
+                        <div class="energy"></div>
+
+                    </ng-template>
+                </app-card>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                <app-card [title]="'Energy Sources'">
+                    <ng-template #cardTemplate>
+                        <div class="energy"></div>
+
+                    </ng-template>
+                </app-card>
+            </div>
+
+        </div>
     </div>
-  </div>
+</div>

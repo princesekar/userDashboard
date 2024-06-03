@@ -3,7 +3,7 @@
         <div class="col-md-4 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
                     [src]="profile.profile.imgUrl" width="90">
-                <span class="font-weight-bold">{{profile.profile.firstname}}{{profile.profile.secondname}}</span>
+                <span class="font-weight-bold">{{profile.profile.firstname}} {{profile.profile.secondname}}</span>
                 <span class="text-black-50">{{profile.profile.email}}</span>
                 <span>{{profile.profile.country}}</span>
             </div>
@@ -44,7 +44,7 @@
                             [(ngModel)]="profile.profile.number" name="number" [disabled]="!isEditing"></div>
                 </div>
                 <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button"
-                        (click)="saveProfile()">Save Profile</button></div>
+                        (click)="saveProfile()" [disabled]="!isEditing">Save Profile</button></div>
             </div>
         </div>
     </div>

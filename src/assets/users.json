@@ -5,12 +5,12 @@
         "id": "1",
         "email": "user1@example.com",
         "password": "prince",
-        "firstname": "User",
-        "secondname": "me",
-        "age": "296",
+        "firstname": "prince",
+        "secondname": "sekar",
+        "age": "29",
         "country": "Indian",
-        "address": "123 Main St",
-        "number": "9524571823",
+        "address": "3/12, main road, udyarkulam",
+        "number": "9655051426",
         "imgUrl": "/assets/profile-img/Prince.JPG"
       },
       "id": "1"

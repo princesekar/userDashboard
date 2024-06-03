@@ -1,8 +1,9 @@
 // auth.service.ts
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,8 @@ import { map, catchError } from 'rxjs/operators';
 export class AuthService {
   private loggedIn = false;
 
-  constructor(private http: HttpClient) {
-    this.loggedIn = !!localStorage.getItem('loggedIn'); // Check local storage for logged-in status
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,private http: HttpClient) {
+      // Check local storage for logged-in status
   }
 
   login(email: string, password: string): Observable<boolean> {
@@ -37,7 +38,9 @@ export class AuthService {
   }
 
   isLoggedIn(): boolean {
-    return this.loggedIn;
+    // Check local storage for logged-in status
+    let loggedIn = localStorage.getItem('loggedIn') == 'true' ? true : false;
+    return loggedIn;
   }
 
   getCurrentUserEmail(): any {
