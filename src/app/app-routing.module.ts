@@ -8,6 +8,7 @@ import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 // import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' }, 
   {
     path: '',
     component: LayoutComponent,

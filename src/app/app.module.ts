@@ -12,8 +12,7 @@ import { SideNavComponent } from './layout/side-nav/side-nav.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 import { CardComponent } from './shared/component/card/card.component';
-
-// import { LayoutModule } from './layout/layout.module';
+import { BaseChartDirective, provideCharts, withDefaultRegisterables } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -32,8 +31,9 @@ import { CardComponent } from './shared/component/card/card.component';
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    BaseChartDirective
   ],
-  providers: [provideHttpClient(withFetch())],
+  providers: [provideHttpClient(withFetch()), provideCharts(withDefaultRegisterables())],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

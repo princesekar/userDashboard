@@ -1,33 +1,87 @@
 <div class="app-dashboard container-fluid">
-    <div class="nav-section mb-2">
-    </div>
     <div class="card-section container-fluid g-0">
         <div class="row gy-2 gx-2">
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                <app-card [title]="'Energy Sources'">
-                    <ng-template #cardTemplate>
-                        <div class="energy"></div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-8">
+                <div class="row gy-2 gx-2">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <app-card [title]="'Profile'">
+                            <ng-template #cardTemplate>
+                                <div class="row">
+                                    <div class="col-4 d-flex flex-row align-items-center text-center"
+                                        style="border-right: 1px solid gray;"><img class="rounded-circle"
+                                            [src]="profile.profile.imgUrl" width="90" height="100">
+                                    </div>
+                                    <div class="col-8 d-flex flex-column align-items-center text-center">
+                                        <span class="font-weight-bold">{{profile.profile.firstname}}
+                                            {{profile.profile.secondname}}</span>
+                                        <span class="text-black-50">{{profile.profile.email}}</span>
+                                        <span>{{profile.profile.country}}</span>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </app-card>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <app-card [title]="'Energy Sources'">
+                            <ng-template #cardTemplate>
+                                    <iframe src="https://github.com" title="Iframe Example"></iframe>
+                            </ng-template>
+                        </app-card>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row gy-2 gx-2">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <app-card [title]="'Energy Sources'">
+                                <ng-template #cardTemplate>
 
-                    </ng-template>
-                </app-card>
+                                </ng-template>
+                            </app-card>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <app-card [title]="'Energy Sources'">
+                                <ng-template #cardTemplate>
+
+                                </ng-template>
+                            </app-card>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                <app-card [title]="'Energy Sources'">
-                    <ng-template #cardTemplate>
-                        <div class="energy"></div>
+                <div class="row gy-3 gx-3">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-12 gy-3 gx-3">
+                        <app-card [title]="'Energy Sources'">
+                            <ng-template #cardTemplate>
 
-                    </ng-template>
-                </app-card>
+                            </ng-template>
+                        </app-card>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-12">
+                        <app-card [title]="'Energy Sources'">
+                            <ng-template #cardTemplate>
+
+                            </ng-template>
+                        </app-card>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                <app-card [title]="'Energy Sources'">
-                    <ng-template #cardTemplate>
-                        <div class="energy"></div>
-
-                    </ng-template>
-                </app-card>
-            </div>
-
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+<!-- <app-card [title]="'Energy Sources'">
+    <ng-template #cardTemplate>
+        <div class="energy"></div>
+        <canvas baseChart type="line" [data]="energyChart">
+        </canvas>
+    </ng-template>
+</app-card> -->

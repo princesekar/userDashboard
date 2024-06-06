@@ -1,0 +1,11 @@
+div.static-left-nav {
+    display: block;
+  }
+  
+  @media (max-width: 992px) {
+    div.static-left-nav {
+      display: none;
+    }
+  }
+  
+  

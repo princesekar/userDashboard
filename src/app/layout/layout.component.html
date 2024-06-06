@@ -1,15 +1,17 @@
 <div class="app-home">
-      <app-header
-      ></app-header>
-      <div class="container-fluid m-0 g-0">
-        <div class="row">
-          <div class="col-md-0 col-lg-2 static-left-nav">
-            <app-side-nav></app-side-nav>
-          </div>
-          <div class="col-md-12 col-lg-9 me-5">
-            <router-outlet></router-outlet>
-          </div>
-        </div>
+  <div class="container-fluid m-0">
+    <div class="row">
+      <div class="col-md-0 col-lg-2">
+        <app-side-nav></app-side-nav>
       </div>
+      <div class="col-md-12 col-lg-10">
+        <div class="col-md-12 col-lg-12">
+          <app-header></app-header>
+        </div>
+        <div class="col-md-12 col-lg-12">
+        <router-outlet></router-outlet>
+      </div>
+      </div>
+    </div>
   </div>
-  
+</div>
