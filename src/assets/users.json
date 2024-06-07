@@ -3,7 +3,74 @@
     {
       "firstname": "prince",
       "secondname": "sekar",
-      "email": "user1@example.com",
+      "email": "prince@prince.com",
+      "age": "25",
+      "address": "3/12, main road, udyarkulam",
+      "pincode": "628617",
+      "district": "thoothukudi",
+      "country": "Indian",
+      "password": "prince@123",
+      "number": "9655051426",
+      "imgUrl": "/assets/profile-img/Prince.JPG",
+      "dashboard": [
+        {
+          "updateui": [
+            50,
+            20,
+            25,
+            2
+          ],
+          "status": [
+            [
+              90,
+              96,
+              85,
+              86,
+              70,
+              100
+            ],
+            [
+              65,
+              66,
+              60,
+              81,
+              56,
+              55,
+              40,
+              62,
+              67,
+              70,
+              80
+            ]
+          ],
+          "task": [
+            [
+              28,
+              48,
+              40,
+              19,
+              41,
+              27,
+              30
+            ],
+            [
+              65,
+              59,
+              80,
+              81,
+              56,
+              55,
+              40
+            ]
+          ]
+        }
+      ],
+      "id": "1"
+    },
+    {
+      "firstname": "sam",
+      "secondname": "sam",
+      "email": "user2@example.com",
       "age": "25",
       "address": "3/12, main road, udyarkulam",
       "pincode": "628617",
@@ -11,32 +78,62 @@
       "country": "Indian",
       "password": "prince",
       "number": "9655051426",
-      "imgUrl": "/assets/profile-img/Prince.JPG",
+      "imgUrl": "/assets/profile-img/image.png",
       "dashboard": [
         {
-          "chart": [
-            96,
-            96
+          "updateui": [
+            55,
+            23,
+            30,
+            0
           ],
-          "chartvalue": [
-            10,
-            10
+          "status": [
+            [
+              66,
+              77,
+              99,
+              57,
+              70,
+              56
+            ],
+            [
+              54,
+              75,
+              96,
+              52,
+              65,
+              72,
+              66,
+              97,
+              72,
+              75,
+              45,
+              85
+            ]
+          ],
+          "task": [
+            [
+              28,
+              48,
+              40,
+              19,
+              41,
+              27,
+              30
+            ],
+            [
+              65,
+              59,
+              80,
+              81,
+              56,
+              55,
+              40
+            ]
           ]
         }
       ],
-      "id": "1"
-    },
-    {
-      "id": "2",
-      "email": "user2@example.com",
-      "password": "password2",
-      "firstname": "User",
-      "secondname": "Two",
-      "age": 35,
-      "country": "USA",
-      "address": "456 Oak St",
-      "number": "564649449",
-      "imgUrl": "/assets/profile-img/image.png"
+      "id": "2"
     }
   ]
 }

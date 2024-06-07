@@ -9,7 +9,7 @@
                                 <i class="bi bi-plus-square-fill fa-2x"></i>
                             </div>
                             <div class="col-4">
-                                <h3>6262</h3>
+                                <h3>{{this.profile.dashboard[0].updateui[0]}}</h3>
                             </div>
                         </div>
                         <div class="d-flex justify-content-evenly">
@@ -27,7 +27,7 @@
                                 <i class="bi bi-activity fa-2x"></i>
                             </div>
                             <div class="col-4">
-                                <h3>6262</h3>
+                                <h3>{{this.profile.dashboard[0].updateui[1]}}</h3>
                             </div>
                         </div>
                         <div class="d-flex justify-content-evenly">
@@ -45,7 +45,7 @@
                                 <i class="bi bi-building-fill-check fa-2x"></i>
                             </div>
                             <div class="col-4">
-                                <h3>6262</h3>
+                                <h3>{{this.profile.dashboard[0].updateui[2]}}</h3>
                             </div>
                         </div>
                         <div class="d-flex justify-content-evenly">
@@ -63,12 +63,12 @@
                                 <i class="bi bi-x-square-fill fa-2x"></i>
                             </div>
                             <div class="col-4">
-                                <h3>6262</h3>
+                                <h3>{{this.profile.dashboard[0].updateui[3]}}</h3>
                             </div>
                         </div>
                         <div class="d-flex justify-content-evenly">
                             <span><b>Status :</b></span>
-                            <span><b>Good</b></span>
+                            <span><b>Bad</b></span>
                         </div>
                     </ng-template>
                 </app-card>
@@ -115,7 +115,7 @@
                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <app-card [title]="'Working Status'">
                             <ng-template #cardTemplate>
-                                <canvas baseChart [data]="leaveChartData" [options]="leaveChartOptions" type="line">
+                                <canvas baseChart [data]="getAlertsData().leaveChartData" [options]="leaveChartOptions" type="line">
                                 </canvas>
                             </ng-template>
                         </app-card>
@@ -128,7 +128,7 @@
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-12">
                         <app-card [title]="'Task Completion (hr)'">
                             <ng-template #cardTemplate>
-                                <canvas baseChart [data]="lineChartData" [options]="lineChartOptions" type="line">
+                                <canvas baseChart [data]="getAlertsData().lineChartData" [options]="lineChartOptions" type="line">
                                 </canvas>
                             </ng-template>
                         </app-card>
@@ -136,7 +136,7 @@
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-12">
                         <app-card [title]="'Projects'">
                             <ng-template #cardTemplate>
-                                <canvas baseChart [data]="doughnutData" type="doughnut">
+                                <canvas baseChart [data]="getAlertsData().doughnutData" type="doughnut">
                                 </canvas>
                             </ng-template>
                         </app-card>
