@@ -1,4 +1,4 @@
-<div class="card app-card shadow">
+<div class="card app-card shadow" [ngStyle]="{'background-color': cardColor}">
   <div class="card-body">
     <h5 *ngIf="title" class="card-title">{{ title }}</h5>
     <ng-template *ngIf="cardHeader" [ngTemplateOutlet]="cardHeader"></ng-template>

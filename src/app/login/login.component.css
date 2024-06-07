@@ -23,8 +23,7 @@ body {
 }
 
 .image {
-    width: 360px;
-    height: 280px;
+    height: 450px;
 }
 
 .border-line {
@@ -153,7 +152,7 @@ a {
 
     .image {
         width: 300px;
-        height: 220px;
+        height: 320px;
     }
 
     .border-line {

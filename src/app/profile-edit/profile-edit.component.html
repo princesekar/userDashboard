@@ -33,7 +33,13 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6"><input type="text" class="form-control" placeholder="address"
-                            [(ngModel)]="profile.profile.address" name="address" [disabled]="!isEditing"></div>
+                        [(ngModel)]="profile.profile.address" name="address" [disabled]="!isEditing"></div>
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="pincode"
+                            [(ngModel)]="profile.profile.pincode" name="pincode" [disabled]="!isEditing"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><input type="text" class="form-control" placeholder="district"
+                            [(ngModel)]="profile.profile.district" name="district" [disabled]="!isEditing"></div>
                     <div class="col-md-6"><input type="text" class="form-control" placeholder="Country"
                             [(ngModel)]="profile.profile.country" name="country" [disabled]="!isEditing"></div>
                 </div>

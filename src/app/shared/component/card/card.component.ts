@@ -11,7 +11,7 @@ import {
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss'],
+  styleUrl: './card.component.css',
   encapsulation: ViewEncapsulation.None,
 })
 export class CardComponent implements AfterViewInit {
@@ -26,6 +26,9 @@ export class CardComponent implements AfterViewInit {
 
   @Input()
   routePath: string | undefined;
+
+  @Input()
+  cardColor: string | undefined;
 
   @ContentChild('cardTemplate')
   cardTemplate: TemplateRef<any> | null = null;
