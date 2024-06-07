@@ -1,36 +1,42 @@
 {
   "users": [
     {
-      "profile": {
-        "id": "1",
-        "email": "user1@example.com",
-        "password": "prince",
-        "firstname": "prince",
-        "secondname": "sekar",
-        "age": "29",
-        "country": "Indian",
-        "address": "3/12, main road, udyarkulam",
-        "pincode": "628617",
-        "district": "thoothukudi",
-        "number": "9655051426",
-        "imgUrl": "/assets/profile-img/Prince.JPG"
-      },
+      "firstname": "prince",
+      "secondname": "sekar",
+      "email": "user1@example.com",
+      "age": "25",
+      "address": "3/12, main road, udyarkulam",
+      "pincode": "628617",
+      "district": "thoothukudi",
+      "country": "Indian",
+      "password": "prince",
+      "number": "9655051426",
+      "imgUrl": "/assets/profile-img/Prince.JPG",
+      "dashboard": [
+        {
+          "chart": [
+            96,
+            96
+          ],
+          "chartvalue": [
+            10,
+            10
+          ]
+        }
+      ],
       "id": "1"
     },
     {
-      "profile": {
-        "id": "2",
-        "email": "user2@example.com",
-        "password": "password2",
-        "firstname": "User",
-        "secondname": "Two",
-        "age": 35,
-        "country": "USA",
-        "address": "456 Oak St",
-        "number": "564649449",
-        "imgUrl": "/assets/profile-img/image.png"
-      },
-      "id": "2"
+      "id": "2",
+      "email": "user2@example.com",
+      "password": "password2",
+      "firstname": "User",
+      "secondname": "Two",
+      "age": 35,
+      "country": "USA",
+      "address": "456 Oak St",
+      "number": "564649449",
+      "imgUrl": "/assets/profile-img/image.png"
     }
   ]
 }

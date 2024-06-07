@@ -2,56 +2,112 @@
     <div class="row">
         <div class="col-md-4 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
-                    [src]="profile.profile.imgUrl" width="200">
-                <span class="font-weight-bold">{{profile.profile.firstname}} {{profile.profile.secondname}}</span>
-                <span class="text-black-50">{{profile.profile.email}}</span>
-                <span>{{profile.profile.country}}</span>
+                    [src]="profile.imgUrl" width="200">
+                <span class="font-weight-bold">{{profile.firstname}} {{profile.secondname}}</span>
+                <span class="text-black-50">{{profile.email}}</span>
+                <span>{{profile.country}}</span>
             </div>
         </div>
         <div class="col-md-8">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div class="d-flex flex-row align-items-center back">
-                        <a routerLink="/dashboard"><b><i class="bi bi-arrow-left"></i> Back to Dashboard</b></a>
+            <form [formGroup]="profileform" (ngSubmit)="saveProfile()">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="d-flex flex-row align-items-center back">
+                            <a routerLink="/dashboard"><b><i class="bi bi-arrow-left"></i> Back to Dashboard</b></a>
+                        </div>
+                        <!-- <div class="back">
+                            <a (click)="editProfile()" class="" type="button"><b><i class="bi bi-pencil-square"></i>
+                                    Edit
+                                    Profile</b></a>
+                        </div> -->
                     </div>
-                    <div class="back">
-                        <a (click)="editProfile()" class="" type="button"><b><i class="bi bi-pencil-square"></i> Edit
-                                Profile</b></a>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="First name"
+                                    formControlName="firstname" name="name" >
+                            <div class="text-danger" *ngIf="checkValidation(
+                                getAbstractControl('firstname'))">
+                                <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Second name"
+                                    formControlName="secondname" name="name" >
+                            <div class="text-danger" *ngIf="checkValidation(
+                                getAbstractControl('secondname'))">
+                                <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                            </div>
+                        </div>
                     </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Email"
+                                formControlName="email" name="email" >
+                                <div class="text-danger" *ngIf="checkValidation(
+                                getAbstractControl('email'))">
+                                <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                            </div>
+                            </div>
+                        <div class="col-md-6"><input type="text" class="form-control" placeholder="Age"
+                                formControlName="age" name="age" >
+                                <div class="text-danger" *ngIf="checkValidation(
+                                    getAbstractControl('age'))">
+                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6"><input type="text" class="form-control" placeholder="address"
+                                formControlName="address" name="address" >
+                                <div class="text-danger" *ngIf="checkValidation(
+                                    getAbstractControl('address'))">
+                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                </div>
+                            </div>
+                        <div class="col-md-6"><input type="text" class="form-control" placeholder="pincode"
+                                formControlName="pincode" name="pincode" >
+                                <div class="text-danger" *ngIf="checkValidation(
+                                    getAbstractControl('pincode'))">
+                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6"><input type="text" class="form-control" placeholder="district"
+                                formControlName="district" name="district" >
+                                <div class="text-danger" *ngIf="checkValidation(
+                                    getAbstractControl('district'))">
+                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                </div>
+                            </div>
+                        <div class="col-md-6"><input type="text" class="form-control" placeholder="Country"
+                                formControlName="country" name="country" >
+                                <div class="text-danger" *ngIf="checkValidation(
+                                    getAbstractControl('country'))">
+                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6"><input type="password" class="form-control" placeholder="Password"
+                                formControlName="password" name="password" >
+                                <div class="text-danger" *ngIf="checkValidation(
+                                    getAbstractControl('password'))">
+                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                </div>
+                            </div>
+                        <div class="col-md-6"><input type="text" class="form-control" placeholder="Mobile Number"
+                                formControlName="number" name="number" >
+                                <div class="text-danger" *ngIf="checkValidation(
+                                    getAbstractControl('number'))">
+                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                </div>
+                            </div>
+                    </div>
+                    <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button"
+                            type="submit" >Save Profile</button></div>
                 </div>
-                <div class="row mt-2">
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="First name"
-                            [(ngModel)]="profile.profile.firstname" name="name" [disabled]="!isEditing"></div>
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Second name"
-                            [(ngModel)]="profile.profile.secondname" name="name" [disabled]="!isEditing"></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Email"
-                            [(ngModel)]="profile.profile.email" name="email" [disabled]="!isEditing"></div>
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Age"
-                            [(ngModel)]="profile.profile.age" name="age" [disabled]="!isEditing"></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="address"
-                        [(ngModel)]="profile.profile.address" name="address" [disabled]="!isEditing"></div>
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="pincode"
-                            [(ngModel)]="profile.profile.pincode" name="pincode" [disabled]="!isEditing"></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="district"
-                            [(ngModel)]="profile.profile.district" name="district" [disabled]="!isEditing"></div>
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Country"
-                            [(ngModel)]="profile.profile.country" name="country" [disabled]="!isEditing"></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><input type="password" class="form-control" placeholder="Password"
-                            [(ngModel)]="profile.profile.password" name="password" [disabled]="!isEditing"></div>
-                    <div class="col-md-6"><input type="text" class="form-control" placeholder="Mobile Number"
-                            [(ngModel)]="profile.profile.number" name="number" [disabled]="!isEditing"></div>
-                </div>
-                <div class="mt-5 text-right"><button class="btn btn-primary profile-button" type="button"
-                        (click)="saveProfile()" [disabled]="!isEditing">Save Profile</button></div>
-            </div>
+            </form>
         </div>
     </div>
 </div>

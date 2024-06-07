@@ -82,13 +82,13 @@
                                 <div class="row pt-4 pb-4">
                                     <div class="col-4 d-flex flex-row align-items-center text-center"
                                         style="border-right: 1px solid gray;"><img class="rounded-circle"
-                                            [src]="profile.profile.imgUrl" width="90" height="100">
+                                            [src]="profile.imgUrl" width="90" height="100">
                                     </div>
                                     <div class="col-8 d-flex flex-column align-items-center text-center">
-                                        <span class="font-weight-bold">{{profile.profile.firstname}}
-                                            {{profile.profile.secondname}}</span>
-                                        <span class="text-black-50">{{profile.profile.email}}</span>
-                                        <span>{{profile.profile.country}}</span>
+                                        <span class="font-weight-bold">{{profile.firstname}}
+                                            {{profile.secondname}}</span>
+                                        <span class="text-black-50">{{profile.email}}</span>
+                                        <span>{{profile.country}}</span>
                                     </div>
                                 </div>
                             </ng-template>
@@ -98,13 +98,13 @@
                         <app-card [title]="'Address'">
                             <ng-template #cardTemplate>
                                 <div class="col-12 d-flex flex-column align-items-center text-center">
-                                    <span class="font-weight-bold">{{profile.profile.firstname}}
-                                        {{profile.profile.secondname}}</span>
-                                    <span>{{profile.profile.address}}</span>
-                                    <span>{{profile.profile.pincode}}</span>
-                                    <span>{{profile.profile.district}}</span>
-                                    <span>{{profile.profile.country}}</span>
-                                    <span>{{profile.profile.number}}</span>
+                                    <span class="font-weight-bold">{{profile.firstname}}
+                                        {{profile.secondname}}</span>
+                                    <span>{{profile.address}}</span>
+                                    <span>{{profile.pincode}}</span>
+                                    <span>{{profile.district}}</span>
+                                    <span>{{profile.country}}</span>
+                                    <span>{{profile.number}}</span>
                                 </div>
                             </ng-template>
                         </app-card>

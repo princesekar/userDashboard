@@ -25,7 +25,7 @@ export class SharedService {
   fetchUserProfile(): Observable<any> {
     this.userEmail = this.authService.getCurrentUserEmail();
     return this.http.get<any[]>(this.apiUrl).pipe(
-      map(users => users.find(user => user.profile.email === this.userEmail))
+      map(users => users.find(user => user.email === this.userEmail))
     );
   }
 }

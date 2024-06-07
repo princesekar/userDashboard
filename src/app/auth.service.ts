@@ -9,7 +9,7 @@ import { isPlatformBrowser } from '@angular/common';
   providedIn: 'root'
 })
 export class AuthService {
-  private loggedIn = false;
+  loggedIn = false;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object,private http: HttpClient) {
       // Check local storage for logged-in status
@@ -18,7 +18,7 @@ export class AuthService {
   login(email: string, password: string): Observable<boolean> {
     return this.http.get<any[]>('http://localhost:3000/users').pipe(
       map((users: any[]) => {
-        const user = users.find(u => u.profile.email === email && u.profile.password === password);
+        const user = users.find(u => u.email === email && u.password === password);
         if (user) {
           this.loggedIn = true;
           localStorage.setItem('loggedIn', 'true'); // Store login status in local storage
