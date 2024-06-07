@@ -1,12 +1,85 @@
 <div class="app-dashboard container-fluid">
     <div class="card-section container-fluid g-0">
         <div class="row gy-2 gx-2">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <app-card [title]="'New Project'" [cardColor]="'#b4cff8'">
+                    <ng-template #cardTemplate>
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-4">
+                                <i class="bi bi-plus-square-fill fa-2x"></i>
+                            </div>
+                            <div class="col-4">
+                                <h3>6262</h3>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-evenly">
+                            <span><b>Status :</b></span>
+                            <span><b>Good</b></span>
+                        </div>
+                    </ng-template>
+                </app-card>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <app-card [title]="'Progress'" [cardColor]="'#f7e4b6'">
+                    <ng-template #cardTemplate>
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-4">
+                                <i class="bi bi-activity fa-2x"></i>
+                            </div>
+                            <div class="col-4">
+                                <h3>6262</h3>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-evenly">
+                            <span><b>Status :</b></span>
+                            <span><b>Good</b></span>
+                        </div>
+                    </ng-template>
+                </app-card>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <app-card [title]="'Completed'" [cardColor]="'#b1c5b6'">
+                    <ng-template #cardTemplate>
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-4">
+                                <i class="bi bi-building-fill-check fa-2x"></i>
+                            </div>
+                            <div class="col-4">
+                                <h3>6262</h3>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-evenly">
+                            <span><b>Status :</b></span>
+                            <span><b>Good</b></span>
+                        </div>
+                    </ng-template>
+                </app-card>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                <app-card [title]="'Canceled'" [cardColor]="'#edb1b9'">
+                    <ng-template #cardTemplate>
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-4">
+                                <i class="bi bi-x-square-fill fa-2x"></i>
+                            </div>
+                            <div class="col-4">
+                                <h3>6262</h3>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-evenly">
+                            <span><b>Status :</b></span>
+                            <span><b>Good</b></span>
+                        </div>
+                    </ng-template>
+                </app-card>
+            </div>
+
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-8">
                 <div class="row gy-2 gx-2">
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                         <app-card [title]="'Profile'">
                             <ng-template #cardTemplate>
-                                <div class="row">
+                                <div class="row pt-4 pb-4">
                                     <div class="col-4 d-flex flex-row align-items-center text-center"
                                         style="border-right: 1px solid gray;"><img class="rounded-circle"
                                             [src]="profile.profile.imgUrl" width="90" height="100">
@@ -22,46 +95,49 @@
                         </app-card>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                        <app-card [title]="'Energy Sources'">
+                        <app-card [title]="'Address'">
                             <ng-template #cardTemplate>
-                                    <iframe src="https://github.com" title="Iframe Example"></iframe>
+                                <div class="col-12 d-flex flex-column align-items-center text-center">
+                                    <span class="font-weight-bold">{{profile.profile.firstname}}
+                                        {{profile.profile.secondname}}</span>
+                                    <span>{{profile.profile.address}}</span>
+                                    <span>{{profile.profile.pincode}}</span>
+                                    <span>{{profile.profile.district}}</span>
+                                    <span>{{profile.profile.country}}</span>
+                                    <span>{{profile.profile.number}}</span>
+                                </div>
                             </ng-template>
                         </app-card>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="row gy-2 gx-2">
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <app-card [title]="'Energy Sources'">
-                                <ng-template #cardTemplate>
-
-                                </ng-template>
-                            </app-card>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <app-card [title]="'Energy Sources'">
-                                <ng-template #cardTemplate>
-
-                                </ng-template>
-                            </app-card>
-                        </div>
+                <!-- row three in dashboard -->
+                <div class="row gy-2 gx-2 pt-2">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <app-card [title]="'Working Status'">
+                            <ng-template #cardTemplate>
+                                <canvas baseChart [data]="leaveChartData" [options]="leaveChartOptions" type="line">
+                                </canvas>
+                            </ng-template>
+                        </app-card>
                     </div>
                 </div>
-
             </div>
+            <!-- this the right side cards -->
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                <div class="row gy-3 gx-3">
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-12 gy-3 gx-3">
-                        <app-card [title]="'Energy Sources'">
+                <div class="row gy-2 gx-2">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-12">
+                        <app-card [title]="'Task Completion (hr)'">
                             <ng-template #cardTemplate>
-
+                                <canvas baseChart [data]="lineChartData" [options]="lineChartOptions" type="line">
+                                </canvas>
                             </ng-template>
                         </app-card>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-12">
-                        <app-card [title]="'Energy Sources'">
+                        <app-card [title]="'Projects'">
                             <ng-template #cardTemplate>
-
+                                <canvas baseChart [data]="doughnutData" type="doughnut">
+                                </canvas>
                             </ng-template>
                         </app-card>
                     </div>
