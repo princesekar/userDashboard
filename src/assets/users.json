@@ -70,13 +70,13 @@
     {
       "firstname": "sam",
       "secondname": "sam",
-      "email": "user2@example.com",
+      "email": "sam@sam.com",
       "age": "25",
       "address": "3/12, main road, udyarkulam",
       "pincode": "628617",
       "district": "thoothukudi",
       "country": "Indian",
-      "password": "prince",
+      "password": "sam@123",
       "number": "9655051426",
       "imgUrl": "/assets/profile-img/image.png",
       "dashboard": [
