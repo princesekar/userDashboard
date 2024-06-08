@@ -31,82 +31,6 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  // Array of different segments in chart
-  lineChartData = {
-    labels: ['1 Am', '2 Am', '3 Am', '4 AM', '5 AM', '6 AM', '7 AM'],
-    datasets: [
-      {
-        label: 'Today',
-        data: [28, 48, 40, 19, 41, 27, 30],
-        borderColor: '#F01D1D',
-        backgroundColor: '#f2b5ae',
-        borderWidth: 1,
-        pointRadius: 2,
-        pointBackgroundColor: '#F01D1D',
-        pointBorderColor: '#F01D1D',
-        fill: true
-      },
-      {
-        label: 'Yesterday',
-        data: [65, 59, 80, 81, 56, 55, 40],
-        borderColor: '#508b8c',
-        borderWidth: 1,
-        pointRadius: 2,
-        backgroundColor: 'rgba(110, 190, 191, 0.2)',
-        pointBackgroundColor: '#508b8c',
-        pointBorderColor: '#508b8c',
-        fill: true
-      },
-    ],
-  };
-
-  leaveChartData = {
-    labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-    datasets: [
-      {
-        label: 'Current Year ',
-        data: [90, 96, 85, 86, 70, 100],
-        borderColor: '#F01D1D',
-        backgroundColor: '#f2b5ae',
-        borderWidth: 1,
-        pointRadius: 2,
-        pointBackgroundColor: '#F01D1D',
-        pointBorderColor: '#F01D1D',
-      },
-      {
-        label: 'Previous Year',
-        data: [65, 0, 60, 81, 56, 55, 40],
-        borderColor: '#508b8c',
-        borderWidth: 1,
-        pointRadius: 2,
-        backgroundColor: 'rgba(110, 190, 191, 0.2)',
-        pointBackgroundColor: '#508b8c',
-        pointBorderColor: '#508b8c',
-      },
-    ],
-  };
-
-  doughnutData = {
-    labels: [
-      'New',
-      'Progress',
-      'Completed',
-      'Canceled'
-    ],
-    datasets: [{
-      label: 'Projects',
-      data: [40, 20, 30, 10],
-      backgroundColor: [
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)',
-        'rgb(68, 131, 102)',
-        'rgb(255, 99, 132)',
-      ],
-      hoverOffset: 4
-    }]
-  };
-
-  // Define chart options
   lineChartOptions = {
     maintainAspectRatio: true,
     plugins: {
@@ -168,14 +92,14 @@ export class DashboardComponent implements OnInit {
 
 
   getAlertsData = () => {
-    
+
     let taskData1 = this.profile.dashboard[0].task[0];
     let taskData2 = this.profile.dashboard[0].task[1];
-    let leaveCData1= this.profile.dashboard[0].status[0];
-    let leaveCData2= this.profile.dashboard[0].status[1];
+    let leaveCData1 = this.profile.dashboard[0].status[0];
+    let leaveCData2 = this.profile.dashboard[0].status[1];
     let doughnutForData = this.profile.dashboard[0].updateui;
 
-   let lineChartData = {
+    let lineChartData = {
       labels: ['1 Am', '2 Am', '3 Am', '4 AM', '5 AM', '6 AM', '7 AM'],
       datasets: [
         {
@@ -202,9 +126,9 @@ export class DashboardComponent implements OnInit {
         },
       ],
     };
-  
+
     let leaveChartData = {
-      labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       datasets: [
         {
           label: 'Current Year ',
@@ -228,7 +152,7 @@ export class DashboardComponent implements OnInit {
         },
       ],
     };
-  
+
     let doughnutData = {
       labels: [
         'New',

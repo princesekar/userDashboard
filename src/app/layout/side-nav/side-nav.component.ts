@@ -10,11 +10,11 @@ export class SideNavComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-   
+
   }
   logout(): void {
     this.authService.logout();
     // this.router.navigate(['/login']);
   }
- 
+
 }

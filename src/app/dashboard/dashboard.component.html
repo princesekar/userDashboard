@@ -115,7 +115,8 @@
                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <app-card [title]="'Working Status'">
                             <ng-template #cardTemplate>
-                                <canvas baseChart [data]="getAlertsData().leaveChartData" [options]="leaveChartOptions" type="line">
+                                <canvas baseChart [data]="getAlertsData().leaveChartData" [options]="leaveChartOptions"
+                                    type="line">
                                 </canvas>
                             </ng-template>
                         </app-card>
@@ -128,7 +129,8 @@
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-12">
                         <app-card [title]="'Task Completion (hr)'">
                             <ng-template #cardTemplate>
-                                <canvas baseChart [data]="getAlertsData().lineChartData" [options]="lineChartOptions" type="line">
+                                <canvas baseChart [data]="getAlertsData().lineChartData" [options]="lineChartOptions"
+                                    type="line">
                                 </canvas>
                             </ng-template>
                         </app-card>
@@ -146,18 +148,3 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-<!-- <app-card [title]="'Energy Sources'">
-    <ng-template #cardTemplate>
-        <div class="energy"></div>
-        <canvas baseChart type="line" [data]="energyChart">
-        </canvas>
-    </ng-template>
-</app-card> -->

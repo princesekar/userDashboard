@@ -15,11 +15,6 @@
                         <div class="d-flex flex-row align-items-center back">
                             <a routerLink="/dashboard"><b><i class="bi bi-arrow-left"></i> Back to Dashboard</b></a>
                         </div>
-                        <!-- <div class="back">
-                            <a (click)="editProfile()" class="" type="button"><b><i class="bi bi-pencil-square"></i>
-                                    Edit
-                                    Profile</b></a>
-                        </div> -->
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-6">
@@ -27,7 +22,7 @@
                                     formControlName="firstname" name="name" >
                             <div class="text-danger" *ngIf="checkValidation(
                                 getAbstractControl('firstname'))">
-                                <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                <i class="fa-solid fa-circle-exclamation me-2"></i>First name is required
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -35,7 +30,7 @@
                                     formControlName="secondname" name="name" >
                             <div class="text-danger" *ngIf="checkValidation(
                                 getAbstractControl('secondname'))">
-                                <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                <i class="fa-solid fa-circle-exclamation me-2"></i>Second name is required
                             </div>
                         </div>
                     </div>
@@ -45,46 +40,46 @@
                                 formControlName="email" name="email" >
                                 <div class="text-danger" *ngIf="checkValidation(
                                 getAbstractControl('email'))">
-                                <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                <i class="fa-solid fa-circle-exclamation me-2"></i>Email is required
                             </div>
                             </div>
                         <div class="col-md-6"><input type="text" class="form-control" placeholder="Age"
                                 formControlName="age" name="age" >
                                 <div class="text-danger" *ngIf="checkValidation(
                                     getAbstractControl('age'))">
-                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Age is required
                                 </div>
                             </div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-6"><input type="text" class="form-control" placeholder="address"
+                        <div class="col-md-6"><input type="text" class="form-control" placeholder="Address"
                                 formControlName="address" name="address" >
                                 <div class="text-danger" *ngIf="checkValidation(
                                     getAbstractControl('address'))">
-                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Address is required
                                 </div>
                             </div>
                         <div class="col-md-6"><input type="text" class="form-control" placeholder="pincode"
                                 formControlName="pincode" name="pincode" >
                                 <div class="text-danger" *ngIf="checkValidation(
                                     getAbstractControl('pincode'))">
-                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                    <i class="fa-solid fa-circle-exclamation me-2"></i>pincode is required
                                 </div>
                             </div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-6"><input type="text" class="form-control" placeholder="district"
+                        <div class="col-md-6"><input type="text" class="form-control" placeholder="District"
                                 formControlName="district" name="district" >
                                 <div class="text-danger" *ngIf="checkValidation(
                                     getAbstractControl('district'))">
-                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                    <i class="fa-solid fa-circle-exclamation me-2"></i>District is required
                                 </div>
                             </div>
                         <div class="col-md-6"><input type="text" class="form-control" placeholder="Country"
                                 formControlName="country" name="country" >
                                 <div class="text-danger" *ngIf="checkValidation(
                                     getAbstractControl('country'))">
-                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Country is required
                                 </div>
                             </div>
                     </div>
@@ -93,14 +88,14 @@
                                 formControlName="password" name="password" >
                                 <div class="text-danger" *ngIf="checkValidation(
                                     getAbstractControl('password'))">
-                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Password is required
                                 </div>
                             </div>
                         <div class="col-md-6"><input type="text" class="form-control" placeholder="Mobile Number"
                                 formControlName="number" name="number" >
                                 <div class="text-danger" *ngIf="checkValidation(
                                     getAbstractControl('number'))">
-                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Field is required
+                                    <i class="fa-solid fa-circle-exclamation me-2"></i>Number is required
                                 </div>
                             </div>
                     </div>

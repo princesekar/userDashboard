@@ -1,30 +1,28 @@
 <body id="body-pd">
-    <div class="l-navbar col-2" id="nav-bar">
-      <nav class="nav">
-        <div>
-          <a href="#" class="nav_logo d-flex justify-content-center zoom-out">
-            <i class="bi bi-person-circle"></i>
-            <span class="nav_logo-name">Bootstrap</span>
-          </a>
-          <div class="nav_list">
-            <a routerLink="/dashboard" routerLinkActive="active" class="nav_link active d-flex justify-content-center zoom-out">
-                <i class="bi bi-house-dash-fill"></i>
-              <span class="nav_name">Dashboard</span>
-            </a>
-            <a routerLink="/profile-edit" routerLinkActive="active" class="nav_link d-flex justify-content-center zoom-out">
-                <i class="bi bi-person-bounding-box"></i>
-              <span class="nav_name">Profile Edit</span>
-            </a>
-          </div>
-        </div>
-        <a (click)="logout()" routerLink="/login" class="nav_link d-flex justify-content-center zoom-out">
-            <i class="bi bi-box-arrow-right"></i>
-          <span class="nav_name">SignOut</span>
+  <div class="l-navbar col-2" id="nav-bar">
+    <nav class="nav">
+      <div>
+        <a href="#" class="nav_logo d-flex justify-content-center zoom-out">
+          <i class="bi bi-person-circle"></i>
+          <span class="nav_logo-name">Bootstrap</span>
         </a>
-      </nav>
-    </div>
-    <!--Container Main start-->
-
-    <!--Container Main end-->
-  </body>
-  
+        <div class="nav_list">
+          <a routerLink="/dashboard" routerLinkActive="active"
+            class="nav_link active d-flex justify-content-center zoom-out">
+            <i class="bi bi-house-dash-fill"></i>
+            <span class="nav_name">Dashboard</span>
+          </a>
+          <a routerLink="/profile-edit" routerLinkActive="active"
+            class="nav_link d-flex justify-content-center zoom-out">
+            <i class="bi bi-person-bounding-box"></i>
+            <span class="nav_name">Profile Edit</span>
+          </a>
+        </div>
+      </div>
+      <a (click)="logout()" routerLink="/login" class="nav_link d-flex justify-content-center zoom-out">
+        <i class="bi bi-box-arrow-right"></i>
+        <span class="nav_name">SignOut</span>
+      </a>
+    </nav>
+  </div>
+</body>

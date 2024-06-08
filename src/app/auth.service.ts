@@ -3,7 +3,6 @@ import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +10,7 @@ import { isPlatformBrowser } from '@angular/common';
 export class AuthService {
   loggedIn = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object,private http: HttpClient) {
-      // Check local storage for logged-in status
-  }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private http: HttpClient) { }
 
   login(email: string, password: string): Observable<boolean> {
     return this.http.get<any[]>('http://localhost:3000/users').pipe(

@@ -42,9 +42,9 @@ export class CardComponent implements AfterViewInit {
   @Output()
   cardClick: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() {}
+  constructor() { }
 
-  ngAfterViewInit() {}
+  ngAfterViewInit() { }
 
   onClick() {
     this.cardClick.emit(this.routePath);

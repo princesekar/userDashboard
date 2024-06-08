@@ -21,13 +21,13 @@ export class ProfileEditComponent implements OnInit {
       firstname: new FormControl(null, Validators.required),
       secondname: new FormControl(null, Validators.required),
       email: new FormControl(null, [Validators.required, Validators.email]),
-      age: new FormControl(null, [Validators.required,Validators.pattern('^[0-9]{2}')]),
+      age: new FormControl(null, [Validators.required, Validators.pattern('^[0-9]{2}')]),
       address: new FormControl(null, Validators.required),
       pincode: new FormControl(null, [Validators.required, Validators.pattern('^[0-9]{6}$')]),
       district: new FormControl(null, Validators.required),
       country: new FormControl(null, Validators.required),
       password: new FormControl(null, [Validators.required, Validators.minLength(6)]),
-      number: new FormControl(null,  [Validators.required, Validators.pattern('^[0-9]{10}$')])
+      number: new FormControl(null, [Validators.required, Validators.pattern('^[0-9]{10}$')])
     })
   }
 
@@ -42,20 +42,20 @@ export class ProfileEditComponent implements OnInit {
     });
   }
 
-setValueForm(){
-  this.profileform.patchValue({
-    firstname: this.profile.firstname,
-    secondname: this.profile.secondname,
-    email: this.profile.email,
-    age: this.profile.age,
-    address: this.profile.address,
-    pincode: this.profile.pincode,
-    district: this.profile.district,
-    country: this.profile.country,
-    password: this.profile.password,
-    number: this.profile.number,
-  });
-}
+  setValueForm() {
+    this.profileform.patchValue({
+      firstname: this.profile.firstname,
+      secondname: this.profile.secondname,
+      email: this.profile.email,
+      age: this.profile.age,
+      address: this.profile.address,
+      pincode: this.profile.pincode,
+      district: this.profile.district,
+      country: this.profile.country,
+      password: this.profile.password,
+      number: this.profile.number,
+    });
+  }
 
   saveProfile() {
     this.formSubmitted = true;
